@@ -1,0 +1,10 @@
+{
+  "name": "@ropimo/digitalife-web",
+  "version": "1.0.0",
+  "description": "digitaLife's web site",
+  "main": "index.js",
+  "repository": "git@github.com:ropimo/digitalife-web.git",
+  "author": "Robert Pinyol <robert.pinyol@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
