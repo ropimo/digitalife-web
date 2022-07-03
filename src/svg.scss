@@ -1,0 +1,87 @@
+
+.letter {
+  fill: none;
+  stroke: #1e1e1e;
+  stroke-width: 15;
+}
+#L, #d {
+  @extend .letter;
+  transition-delay: 1s;
+}
+
+#L {
+  transition: all 1s ease;
+  transform: translateX(+200%);
+}
+#d {
+  transition: all 1s ease;
+  transform: translateX(-200%);
+}
+
+svg {
+  overflow: visible;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+svg:hover #L {
+  transform: translateX(0);
+}
+svg:hover #d {
+  transform: translateX(0);
+}
+svg:hover .letters {
+  transition-delay: 0s;
+}
+svg:hover #leaf1 {
+  //transform: rotate(12deg);
+  //transform: rotate(12deg) translate(82.5px, 105px);
+  //transform: scale(1, 1) translate(82.5px, 105px);
+  transition-delay: 1s;
+  //transform: scale(1, 1);
+  transform: scale(1.2, 1.2) rotate(12deg);
+}
+svg:not(hover) .letters {
+  //transform: rotate(12deg);
+  //transform: rotate(12deg) translate(82.5px, 105px);
+  //transform: scale(1, 1) translate(82.5px, 105px);
+  transition-delay: 1s;
+  //transform: scale(1, 1);
+  //transform: scale(1.2, 1.2) rotate(12deg);
+}
+
+#branch {
+  //transform: scale(0,0);
+  transform: translate(82.5px, 105px);
+  //transform: rotate(120deg) translate(36 45.5);
+}
+
+.leaf1 {
+  //transform: scale(0,0);
+  //transform: translate(82.5px, 105px);
+  //transform: rotate(120deg) translate(36 45.5);
+}
+#leaf1 {
+  transition: all 1s ease;
+  //transform: scale(0, 0) translate(82.5px, 105px);
+  transform: scale(0,0);
+  //position: absolute;
+  //left: 30%;
+}
+
+.leafA {
+  fill: #4cd964;
+}
+.leafB {
+  fill: darkgreen;
+}
+
+#leaf1A {
+  @extend .leaf1;
+  @extend .leafA;
+}
+
+#leaf1B {
+  @extend .leaf1;
+  @extend .leafB;
+}
